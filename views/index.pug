@@ -1,0 +1,7 @@
+h1 Mini Message Board!
+ul
+    each message in messages
+        li.msg-container
+            .msg-txt= message.text
+            .msg-usr= message.user 
+            .msg-date= message.added
