@@ -1,9 +1,8 @@
 const express = require('express')
 const app = express()
-
 const indexRouter = require('./routes/indexRouter')
-//const newMessageRouter = require('./routes/newMessageRouter')
 
+app.use(express.urlencoded({ extended: false }))
 
 app.set('view engine', 'pug')
 app.set('views', './views')

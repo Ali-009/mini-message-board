@@ -1,0 +1,7 @@
+h1 Create a Message
+form(method="POST" action="/new")
+    label(for="message-author") Author
+        input(id="message-author" type="text" name="messageAuthor")
+    label(for="message-text") Message
+        textarea(id="message-text" type="text" name="messageText" cols="30" rows="10")
+    button Post Message!
