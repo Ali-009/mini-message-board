@@ -1,0 +1,37 @@
+.page-container{
+    width: auto;
+}
+
+form{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 32px;
+    padding-left: 24px;
+}
+
+label{
+    font-size: 14px;
+    color: rgb(88, 88, 88);
+    padding-left: 12px;
+}
+
+input, textarea{
+    appearance: none;
+    display: block;
+    border: solid thin lightgray;
+    border-radius: 8px;
+    margin-top: 4px;
+    padding: 12px;
+}
+
+input{
+    width: 256px;
+    height: 24px;
+    font-size: 16px;
+}
+
+textarea{
+    resize: none;
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 18px;
+}

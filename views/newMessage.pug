@@ -1,7 +1,22 @@
-h1 Create a Message
-form(method="POST" action="/new")
-    label(for="message-author") Author
-        input(id="message-author" type="text" name="messageAuthor")
-    label(for="message-text") Message
-        textarea(id="message-text" type="text" name="messageText" cols="30" rows="10")
-    button Post Message!
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Create Message
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        link(rel="stylesheet", href="./stylesheets/base.css")
+        link(rel="stylesheet", href="./stylesheets/new-message.css")
+    body
+        .page-container
+            h1 Create a Message
+            form(method="POST" action="/new")
+                .author-input
+                    label(for="message-author") Author
+                    input(id="message-author" type="text" name="messageAuthor")
+                .message-input
+                    label(for="message-text") Message
+                    textarea(id="message-text" type="text" name="messageText" cols="50" rows="5")
+                button.small-btn Post Message!  

@@ -1,30 +1,3 @@
-html{
-    height: 100%;
-}
-
-body{
-    margin: 0;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-}
-
-.page-container{
-    display: flex;
-    flex-flow: column nowrap;
-    align-content: center;
-    width: 712px;
-    gap: 48px;
-
-    font-family: 'Roboto', 'sans-serif';
-    margin: 64px auto;
-}
-
-h1{
-    margin: 0;
-    font-size: 48px;
-}
-
 ul.msg-list{
     margin: 0;
     padding: 0;
@@ -53,12 +26,22 @@ li.msg-container{
     border-bottom: solid thin lightgray;
 }
 
-ul.msg-list > li:nth-last-of-type(1){
+ul.msg-list > li:last-of-type{
     border-bottom: none;
 }
 
 li.msg-container:hover{
-    background-color: rgb(228, 227, 227);
+    background-color: rgb(231, 231, 231);
+}
+
+li.msg-container:first-of-type:hover{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+li.msg-container:last-of-type:hover{
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 li.msg-container > .msg-txt{
@@ -74,30 +57,4 @@ li.msg-container > .msg-date{
 }
 .msg-author, .msg-date{
     color: rgb(114, 114, 114);
-}
-
-button.create-msg{
-    align-self: flex-end;
-    appearance: none;
-    border: none;
-    padding: 0;
-
-    width: 132px;
-    height: 48px;
-    font-size: 16px;
-    font-weight: 700px;
-    background-color: rgb(62, 166, 252);
-    color: white;
-
-}
-
-button.create-msg:hover{
-    background-color: rgb(50, 135, 204);
-}
-
-button.create-msg > a,
-button.create-msg > a:hover,
-button.create-msg > a:visited{
-    color: inherit;
-    text-decoration: none;
 }
