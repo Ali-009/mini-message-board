@@ -1,9 +1,21 @@
-h1 Mini Message Board!
-button
-    a(href="/new") Post Message!
-ul
-    each message in messages
-        li.msg-container
-            .msg-txt= message.text
-            .msg-usr= message.user 
-            .msg-date= message.added
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        link(rel="stylesheet", href="./stylesheets/index.css")
+    body
+        .page-container
+            h1 Mini Message Board!
+            ul.msg-list
+                each message in messages
+                    li.msg-container
+                        .msg-txt= message.text
+                        .msg-author= message.user 
+                        .msg-date= message.added
+            button.create-msg
+                a(href="/new") Post Message!

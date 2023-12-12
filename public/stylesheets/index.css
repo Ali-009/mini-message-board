@@ -1,0 +1,103 @@
+html{
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.page-container{
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: center;
+    width: 712px;
+    gap: 48px;
+
+    font-family: 'Roboto', 'sans-serif';
+    margin: 64px auto;
+}
+
+h1{
+    margin: 0;
+    font-size: 48px;
+}
+
+ul.msg-list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    min-width: 512px;
+    min-height: 384px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around; 
+    align-content: center;
+
+    border: solid thin lightgray;
+    border-radius: 8px;
+}
+
+li.msg-container{
+    display: grid;
+    grid-template-areas: 
+        "text text"
+        "author date";
+    row-gap: 14px;
+
+    padding: 32px 24px;
+    border-bottom: solid thin lightgray;
+}
+
+ul.msg-list > li:nth-last-of-type(1){
+    border-bottom: none;
+}
+
+li.msg-container:hover{
+    background-color: rgb(228, 227, 227);
+}
+
+li.msg-container > .msg-txt{
+    grid-area: text;
+    font-size: 24px;
+}
+li.msg-container > .msg-author{
+    grid-area: author;
+}
+li.msg-container > .msg-date{
+    grid-area: date;
+    justify-self: end;
+}
+.msg-author, .msg-date{
+    color: rgb(114, 114, 114);
+}
+
+button.create-msg{
+    align-self: flex-end;
+    appearance: none;
+    border: none;
+    padding: 0;
+
+    width: 132px;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 700px;
+    background-color: rgb(62, 166, 252);
+    color: white;
+
+}
+
+button.create-msg:hover{
+    background-color: rgb(50, 135, 204);
+}
+
+button.create-msg > a,
+button.create-msg > a:hover,
+button.create-msg > a:visited{
+    color: inherit;
+    text-decoration: none;
+}
